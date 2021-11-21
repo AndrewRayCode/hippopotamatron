@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>The Hippopotamatron 5000</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="cookies.js" type="text/javascript"></script>
+	<script src="functions.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function init() {
+			// Remove the 'must have JS' div
+			new Element($('js_test')).remove();
+			
+			// Create the header of the page
+			var header = new Element('div')
+				.set({'class':'header'})
+				.tween('opacity', 0, 1, 2000)
+				.inject(document.body);
+				
+				// Create the logo innards ... no use of innerHTML grumble grumble
+				var logo = new Element('div').set({'class':'logo'}).inject(header);
+					new Element('text', 'Hippopotamatron').inject(logo);
+				new Element('div').set({'class':'butt'}).inject(header);
+				logo = new Element('div').set({'class':'logo'}).inject(header);
+					new Element('text', '5000').inject(logo);
+				var info = new Element('div').set({'class':'info'}).inject(header);
+					new Element('text', 'By ').inject(info);
+					var a = new Element('a').set({'href':'http://andrewray.me/'}).inject(info);
+						new Element('text', 'Andrew Ray').inject(a);
+
+			// Create the preloader div and its insides
+			var wait = new Element('div').set({'id':'wait', 'class':'wait_div'})
+				.inject(document.body)
+				.tween('opacity', 0, 1, 300)
+				.tween('margin-top', '0px', 200, 500);
+				var h3 = new Element('h3').inject(wait);
+					new Element('text', 'Custom Hippopotami Built to Last!').inject(h3);
+				var p = new Element('p').inject(wait);
+					new Element('text', '( loading hippopotami )').inject(p);
+				var holder = new Element('div').set({'class':'holder'}).inject(wait);
+					var bar = new Element('div').set({'id':'preload_bar'}).inject(holder);
+						new Element('div').set({'class':'cut_left'}).inject(bar);
+						new Element('div').set({'class':'cut_right'}).inject(bar);
+
+			// Call our preloader class with the images we want to preload
+			var preloader = new Preloader(
+					{images: ['explosion_sprite_1.png', 'explosion_sprite_2.png', 'explosion_sprite_3.png', 'explosion_sprite_4.png', 'circle_eat.png', 'circle_grow.png', 'final_hippo.gif']}
+				).start(function(){
+				wait.tween('margin-top', '200px', 400, 300)
+					.tween('opacity', 1, 0, 300, function() {
+					wait.remove();
+					buildMenu(choices);
+				}); // </tween>
+			});// </preloader finish>
+		} // </init>
+	</script>
+</head>
+<body>
+	<div id="js_test">You must have JavaScript enabled to view this page.</div>
+</body>
+<script type="text/javascript">
+	init();
+</script>
+</html>

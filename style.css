@@ -1,0 +1,32 @@
+body{margin:0; padding:0; font-family:Arial, sans-serif; font-size:11pt; height:1640px; border-bottom:5px solid #FF8544; background:#0F1B1C url(hippo_footer.gif) bottom center no-repeat scroll; color:#FF8548;}
+a {color:#FF8548; text-decoration:underline;}
+.header {background:#573328; color:#FF8548; font-size:25pt; font-weight:bold; height:60px; width:100%;}
+.header .logo {margin:10px 20px 0;  float:left;}
+.header .butt {background:url(hippo_logo.jpg) top left no-repeat scroll; width:51px; height:58px; margin-top:0; float:left;}
+.header .info {color:#B05A3A; border-left:5px solid #B05A3A; padding:10px 5px 10px 10px; margin:10px 0 10px 10px; float:left; font-size:12pt;}
+
+/* Preloader styles */
+.wait_div {margin:200px auto 0; border:1px solid #FF8548; background:#29332E; color:#666; padding:20px; width:400px;}
+.wait_div h3 {margin:0 auto 10px; padding:0; font-weight:bold; font-style:italic; font-size:17pt; color:#FF8548; width:380px;}
+.wait_div p {margin:0 auto 10px; padding:0; width:155px;}
+.holder {width:352px; margin:0 auto; line-height:0; height:30px; background:#29332E; position:relative;}
+#preload_bar {background:#FF8548 url(preloader.gif) top left repeat scroll; margin:1px 0 1px; float:left; width:1px; height:28px;}
+#preload_bar .cut_left {background:transparent url(bar_cut.png) top left no-repeat; width:15px; height:30px; float:left;}
+#preload_bar .cut_right {background:transparent url(bar_cut.png) top right no-repeat; width:15px; height:30px; float:right;}
+
+/* Selection option div styles */
+.option {padding:10px 30px 30px; color:#FF8548; font-size:30pt; font-weight:bold; line-height:100px; text-align:center; overflow:hidden; position:absolute;}
+.option select {padding:5px; font-size:15pt; position:absolute; top:96px; left:125px; color:#0F1B1C; border:0 none; text-align:center;}
+
+/* Complete form styles */
+#complete_form {padding:50px; background:#29332E; position:absolute; color:#FF8548; font-size:30pt; font-weight:bold; border-left:5px solid #FF8548;}
+#complete_form .heading {margin:0 0 10px 90px;}
+#complete_form .suggestion {font-size:13pt; color:#FF8548; margin:0; padding:0;}
+#complete_form .final {background:#0F1B1C; color:#B05A3A; font-size:10pt; font-weight:bold; margin:2px 0; padding:10px; position:relative;}
+#complete_form .final_hippo {background:transparent url(final_hippo.gif) top left no-repeat scroll; width:84px; height:88px; top:-79px; left:2px; position:absolute;}
+#complete_form form {margin:0; padding:0;}
+#complete_form .form {background:#0F1B1C; color:#B05A3A; font-size:10pt; font-weight:bold; margin:2px 0; padding:10px; float:left;}
+#complete_form label {border:1px dashed; padding:5px; margin-right:10px; width:80px; margin:10px 10px 0 0; clear:both; text-align:right; display:block; float:left;}
+#complete_form input {color:#FF8548; background:#29332E; border:0 none; padding:5px; margin:10px 0 10px 0; width:260px; float:left;}
+#complete_form .button {background:#573328; color:#FF8548; margin:4px auto; width:372px}
+#complete_form .error_message {color:#FF8548; padding:3px;}
